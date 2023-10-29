@@ -2,24 +2,24 @@
 #define MOUSELISTENER_H
 
 #include <SFML/Graphics.hpp>
+#include "Window.h"
 #include <iostream>
-
-class Window;  // Forward declaration
 
 class mouseListener {
 private:
-    int x;
-    int y;
-    Window* w;  // Change this to a pointer
-    Window* defaultWindow;  // Change this to a pointer
-
+	int x;
+	int y;
+	Window& w;
+	Window defaultWindow;
 public:
-    mouseListener();
-    void Listen(const sf::Event& event);
-    int getX();
-    int getY();
-    void setX(int x);
-    void setY(int y);
+	mouseListener();
+	mouseListener(Window& w);
+	void Listen(const sf::Event& event);
+	int getX();
+	int getY();
+	void setX(int x);
+	void setY(int y);
 };
-
 #endif
+
+

@@ -1,26 +1,24 @@
-#ifndef WINDOW_H
-#define WINDOW_H
+#ifndef WINDOW
+#define WINDOW
 
 #include <iostream>
 #include <SFML/Graphics.hpp>
-
-class mouseListener;  // Forward declaration
+#include "mouseListener.h"
 
 class Window {
 private:
-    int x;
-    int y;
-    sf::RenderWindow window;
-    sf::CircleShape shape;
-    mouseListener* mListener;  // Change this to a pointer
+	int x;
+	int y;
+	sf::RenderWindow window;
+	sf::CircleShape shape;
+	mouseListener mListener;
 public:
-    Window();
-    void run();
-    void implementation();
-    void drawGraphics();
-    void keyListener(const sf::Event& e);
-    void start();
-    void setMouseListener(mouseListener* listener);  // Add a method to set the mouseListener
+	Window();
+	void run();
+	void implementation();
+	void drawGraphics();
+	void keyListener(const sf::Event& e);
+	void start();
 };
-
 #endif
+
