@@ -396,3 +396,13 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+
+#additional ignores
+
+SFML/libaries
+SFML/x64
+*.dll
+*.vcxproj
+*.vcxproj.filters
+*.sln
