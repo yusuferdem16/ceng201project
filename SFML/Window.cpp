@@ -1,9 +1,5 @@
 #include "Window.h"
 
-Window::Window() : window(sf::VideoMode(800, 800), ""), mListener(*this) {
-
-}
-
 void Window::run() {
 
 	implementation();
@@ -18,30 +14,18 @@ void Window::run() {
 				window.close();
 			}
 			mListener.Listen(event);
-			keyListener(event);
+			kListener.Listen(event);
+			std::cout << getX() << " " << getY() << "\n";
 			drawGraphics();
 		}
 	}
 }
 
-void Window::keyListener(const sf::Event& event) {
-
-	//keyPressed
-	if (event.type == sf::Event::KeyPressed) {
-		//Example W pressed
-		if (event.key.code == sf::Keyboard::W) {
-			std::cout << "pressed w";
-		}
-	}
-	if (event.type == sf::Event::KeyReleased) {
-
-	}
-}
-
 void Window::implementation() {
 
-	shape.setFillColor(sf::Color(204, 77, 5));
+	shape.setFillColor(sf::Color(255, 0, 0));
 	shape.setPosition(200, 200);
+
 }
 
 void Window::drawGraphics() {
@@ -55,4 +39,11 @@ void Window::start() {
 	run();
 }
 
+int Window::getX() {
+	return mListener.getX();
+}
+
+int Window::getY() {
+	return mListener.getY();
+}
 

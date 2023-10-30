@@ -1,14 +1,5 @@
 #include "mouseListener.h"
 
-
-mouseListener::mouseListener() : w(defaultWindow), x(0), y(0) {
-
-}
-
-mouseListener::mouseListener(Window& w) : w(w), x(0), y(0) {
-
-}
-
 void mouseListener::Listen(const sf::Event& event) {
 
 	//mousePressed
@@ -24,7 +15,6 @@ void mouseListener::Listen(const sf::Event& event) {
 	if (event.type == sf::Event::MouseMoved) {
 		x = event.mouseMove.x;
 		y = event.mouseMove.y;
-		std::cout << "x:" << x << " y:" << y;
 	}
 }
 

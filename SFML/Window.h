@@ -1,24 +1,26 @@
-#ifndef WINDOW
-#define WINDOW
+#pragma once
 
 #include <iostream>
 #include <SFML/Graphics.hpp>
 #include "mouseListener.h"
+#include "keyListener.h"
+class mouseListener;
+class keyListener;
 
 class Window {
 private:
-	int x;
-	int y;
 	sf::RenderWindow window;
 	sf::CircleShape shape;
 	mouseListener mListener;
+	keyListener kListener;
 public:
-	Window();
+
+	Window() : window(sf::VideoMode(800, 800), ""), shape(100.f), mListener(*this), kListener(*this) {}
 	void run();
 	void implementation();
 	void drawGraphics();
-	void keyListener(const sf::Event& e);
 	void start();
+	int getX();
+	int getY();
 };
-#endif
 
