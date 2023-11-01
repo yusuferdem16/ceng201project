@@ -26,12 +26,16 @@ void Window::implementation() {
 	shape.setFillColor(sf::Color(255, 0, 0));
 	shape.setPosition(200, 200);
 
+	//we can set position of our pngs here... as we did to shape
+
 }
 
 void Window::drawGraphics() {
 
-	window.clear(sf::Color(18, 33, 43));
-	window.draw(shape);
+	window.clear(sf::Color(255, 255, 255));
+	//window.draw(shape); no need to draw shape for now.			
+	window.draw(myIcons.allSprites[0]); /* 0 th element is WARJET.png at this point.
+										we can use a for loop for every sprite when we need*/
 	window.display();
 }
 
