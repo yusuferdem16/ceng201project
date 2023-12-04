@@ -5,26 +5,41 @@
 #include "mouseListener.h"
 #include "keyListener.h"
 #include "ImageIcons.h"
+#include "World.h"
+#include "Character.h"
+#include "Sounds.h"
+
+#include "Level.h"
+
 class mouseListener;
 class keyListener;
 class ImageIcons;
+class World;
+class Character;
+class Level;
 
 class Window {
 private:
+	Level level;
+	World myWorld;
 	sf::RenderWindow window;
-	sf::CircleShape shape;
 	mouseListener mListener;
 	keyListener kListener;
 	ImageIcons myIcons;
-public:
-
-	Window() : window(sf::VideoMode(800, 800), ""), shape(100.f)
-		, mListener(*this), kListener(*this), myIcons(*this) {}
+	Character myCharacter;
+	sf::View view;
+public:	
+	//in constructor first define myWorld after window because we are using numbers from World class.
+	Window(Level level);
 	void run();
 	void implementation();
 	void drawGraphics();
-	void start();
-	int getX();
-	int getY();
+	void drawWorld();
+	void drawCharacter();
+	void leftCollisions();
+	void rightCollisions();
+	void upCollisions();
+	void bottomCollisions();
 };
+
 

@@ -1,20 +1,25 @@
 #include "mouseListener.h"
 
+mouseListener::mouseListener(Window& w) : w(w), x(0), y(0) {}
+
+
 void mouseListener::Listen(const sf::Event& event) {
 
 	//mousePressed
 	if (event.type == sf::Event::MouseButtonPressed) {
-		x = event.mouseButton.x;
-		y = event.mouseButton.y;
+		if (event.key.code == sf::Mouse::Left) {
+			x = event.mouseButton.x;
+			y = event.mouseButton.y;
+		}
 	}
 	//mouseReleased
 	if (event.type == sf::Event::MouseButtonReleased) {
-
+		
 	}
 	//mouse Hover Effect
-	if (event.type == sf::Event::MouseMoved) {
-		x = event.mouseMove.x;
-		y = event.mouseMove.y;
+	if (event.type == sf::Event::MouseMoved) {		
+			x = event.mouseMove.x;
+			y = event.mouseMove.y;		
 	}
 }
 

@@ -10,7 +10,7 @@ private:
 	int imageNumber = 10;
 public:
 	std::vector<sf::Texture> allTextures; // for now we assume we have only 10 textures!
-	std::vector<sf::Sprite> allSprites; // 10 sprites for 10 textures.		
+	std::vector<sf::Sprite> allSprites; // 10 sprites for 10 textures.
 	ImageIcons(Window& w);
 	void implementImages();
 };

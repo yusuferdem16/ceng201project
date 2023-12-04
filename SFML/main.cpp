@@ -1,8 +1,11 @@
 #include <iostream>
 #include "Window.h"
+#include "Level1.h"
 
-int main() {
-	Window w;
-	w.start();
+int main(){
+	Level1 l1;
+	Window w(l1);
+	w.run();
+	
 	return 0;
 }
