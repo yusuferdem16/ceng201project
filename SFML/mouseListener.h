@@ -5,17 +5,17 @@
 class Window;
 
 class mouseListener {
-	private:
-		int x;
-		int y;
-		Window& w;
-	public:
-		mouseListener(Window& w);
-		void Listen(const sf::Event& event);
-		int getX();
-		int getY();
-		void setX(int x);
-		void setY(int y);		
+private:
+	int x;
+	int y;
+	Window& w;
+public:
+	mouseListener(Window& w);
+	void Listen(const sf::Event& event);
+	int getX();
+	int getY();
+	void setX(int x);
+	void setY(int y);
 };
 
 

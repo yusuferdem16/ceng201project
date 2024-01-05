@@ -5,7 +5,7 @@
 class World;
 
 class Level {
-	public:
-		World world;
-		Level();
+public:
+	World world;
+	Level();
 };

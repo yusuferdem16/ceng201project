@@ -1,11 +1,11 @@
 #pragma once
 #include <SFML/System/Vector2.hpp>
-
+#include "ImageIcons.h"
 class Window;
 
 class Character {
 private:
-	const int Size;	
+	const int Size;
 	Window& w;
 
 public:
@@ -22,6 +22,6 @@ public:
 	bool canGoRight = true;
 	bool canGoUp = true;
 	bool canGoDown = true;
-	
+
 };
 

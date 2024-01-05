@@ -14,14 +14,15 @@ void mouseListener::Listen(const sf::Event& event) {
 	}
 	//mouseReleased
 	if (event.type == sf::Event::MouseButtonReleased) {
-		
+
 	}
 	//mouse Hover Effect
-	if (event.type == sf::Event::MouseMoved) {		
-			x = event.mouseMove.x;
-			y = event.mouseMove.y;		
+	if (event.type == sf::Event::MouseMoved) {
+		x = event.mouseMove.x;
+		y = event.mouseMove.y;
 	}
 }
+
 
 int mouseListener::getX() {
 	return x;

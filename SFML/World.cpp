@@ -1,6 +1,6 @@
 #include "World.h"
 
-World::World(){
+World::World() {
 }
 
 void World::setMatrix(std::vector<std::vector<int>> matrix)
